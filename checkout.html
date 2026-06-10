@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Hollowpoint Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Hollowpoint</a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          ☰
+        </button>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="lookbook.html">Lookbook</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="checkout.html">Checkout</a></li>
+          </ul>
+        </nav>
+        <a class="cart-chip" href="cart.html">Cart (2)</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container reveal">
+          <p class="eyebrow">Checkout</p>
+          <h1>Secure Checkout</h1>
+          <p class="muted">Complete your order and lock in this drop before it sells out.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container checkout-grid">
+          <article class="panel reveal">
+            <h2>Shipping Details</h2>
+            <form>
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="Jordan Lee" />
+              </div>
+              <div class="form-group">
+                <label for="email-address">Email</label>
+                <input id="email-address" type="email" placeholder="jordan@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="street">Street Address</label>
+                <input id="street" type="text" placeholder="123 City Avenue" />
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input id="city" type="text" placeholder="New York" />
+              </div>
+              <div class="form-group">
+                <label for="zip">Zip Code</label>
+                <input id="zip" type="text" placeholder="10001" />
+              </div>
+              <div class="form-group">
+                <label for="card">Card Number</label>
+                <input id="card" type="text" placeholder="•••• •••• •••• ••••" />
+              </div>
+              <button class="btn btn-primary" type="submit">Place Order</button>
+            </form>
+          </article>
+
+          <aside class="panel reveal">
+            <h2>Order Summary</h2>
+            <div class="summary-line"><span>Afterdark Hoodie</span><span>$124</span></div>
+            <div class="summary-line"><span>Signal Runner Sneakers</span><span>$172</span></div>
+            <div class="summary-line"><span>Shipping</span><span>$12</span></div>
+            <div class="summary-line"><span>Tax</span><span>$24</span></div>
+            <hr style="border-color: var(--border); margin: 0.9rem 0" />
+            <div class="summary-line"><strong>Total</strong><strong>$332</strong></div>
+            <br />
+            <p class="muted">
+              By placing this order, you agree to the Hollowpoint terms and return policy.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Hollowpoint. Streetwear for the relentless.</p>
+        <p>Encrypted checkout powered by secure payment gateways.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
