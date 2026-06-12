@@ -12,17 +12,44 @@ A modern, responsive cosmetology website showcasing services and products for na
 
 ## Getting Started
 
-Open `index.html` in your browser, or serve locally:
+**Do not double-click `index.html`.** Browsers often block styles and scripts when opening files directly. Use a local server instead.
+
+### Option 1: Quick start (recommended)
 
 ```bash
-# Python
-python3 -m http.server 8000
-
-# Node.js (if npx is available)
-npx serve .
+./start.sh
 ```
 
-Then visit `http://localhost:8000`
+Then open **http://localhost:8000** in your browser.
+
+### Option 2: Python
+
+```bash
+cd /path/to/this/folder
+python3 -m http.server 8000
+```
+
+Then open **http://localhost:8000**
+
+### Option 3: Live online (GitHub Pages)
+
+After merging to `main`, enable **GitHub Pages** in your repo settings:
+
+1. Go to **Settings → Pages**
+2. Under **Build and deployment**, choose **GitHub Actions**
+3. The site will publish at: `https://YOUR-USERNAME.github.io/Hollowpoint-brand/`
+
+### Troubleshooting
+
+- **Blank page or no styling?** You opened the file directly. Use `http://localhost:8000` instead.
+- **Port already in use?** Run `./start.sh 8080` and open `http://localhost:8080`
+- **Don't have the files yet?** Clone the repo first:
+
+```bash
+git clone https://github.com/gavinholloway80-del/Hollowpoint-brand.git
+cd Hollowpoint-brand
+./start.sh
+```
 
 ## Customize
 
