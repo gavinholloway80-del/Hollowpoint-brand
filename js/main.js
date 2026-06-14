@@ -105,4 +105,93 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
   });
+
+  // Notification signup popup
+  const notifyOverlay = document.getElementById('notifyOverlay');
+  const notifyClose = document.getElementById('notifyClose');
+  const notifyDismiss = document.getElementById('notifyDismiss');
+  const notifyForm = document.getElementById('notifyForm');
+  const notifyContent = document.getElementById('notifyContent');
+  const notifySuccess = document.getElementById('notifySuccess');
+  const notifySuccessClose = document.getElementById('notifySuccessClose');
+
+  const NOTIFY_KEY = 'glowGraceNotify';
+  const DISMISS_DAYS = 7;
+  const SHOW_DELAY_MS = 3000;
+
+  function getNotifyState() {
+    try {
+      return JSON.parse(localStorage.getItem(NOTIFY_KEY)) || {};
+    } catch {
+      return {};
+    }
+  }
+
+  function setNotifyState(state) {
+    localStorage.setItem(NOTIFY_KEY, JSON.stringify(state));
+  }
+
+  function shouldShowPopup() {
+    const state = getNotifyState();
+    if (state.subscribed) return false;
+    if (state.dismissedAt) {
+      const daysSince = (Date.now() - state.dismissedAt) / (1000 * 60 * 60 * 24);
+      if (daysSince < DISMISS_DAYS) return false;
+    }
+    return true;
+  }
+
+  function openNotifyPopup() {
+    notifyOverlay.hidden = false;
+    notifyOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => notifyOverlay.classList.add('visible'));
+  }
+
+  function closeNotifyPopup() {
+    notifyOverlay.classList.remove('visible');
+    notifyOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      notifyOverlay.hidden = true;
+    }, 300);
+  }
+
+  if (notifyOverlay && shouldShowPopup()) {
+    setTimeout(openNotifyPopup, SHOW_DELAY_MS);
+  }
+
+  notifyClose?.addEventListener('click', () => {
+    setNotifyState({ ...getNotifyState(), dismissedAt: Date.now() });
+    closeNotifyPopup();
+  });
+
+  notifyDismiss?.addEventListener('click', () => {
+    setNotifyState({ ...getNotifyState(), dismissedAt: Date.now() });
+    closeNotifyPopup();
+  });
+
+  notifyOverlay?.addEventListener('click', (e) => {
+    if (e.target === notifyOverlay) {
+      setNotifyState({ ...getNotifyState(), dismissedAt: Date.now() });
+      closeNotifyPopup();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && notifyOverlay?.classList.contains('visible')) {
+      setNotifyState({ ...getNotifyState(), dismissedAt: Date.now() });
+      closeNotifyPopup();
+    }
+  });
+
+  notifyForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('notifyEmail').value;
+    setNotifyState({ subscribed: true, email, subscribedAt: Date.now() });
+    notifyContent.hidden = true;
+    notifySuccess.hidden = false;
+  });
+
+  notifySuccessClose?.addEventListener('click', closeNotifyPopup);
 });

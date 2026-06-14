@@ -878,6 +878,146 @@ em {
   font-size: 0.85rem;
 }
 
+/* ===== Notification Popup ===== */
+.notify-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(44, 36, 32, 0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.notify-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notify-popup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem 2rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transform: translateY(24px) scale(0.96);
+  transition: transform var(--transition);
+}
+
+.notify-overlay.visible .notify-popup {
+  transform: translateY(0) scale(1);
+}
+
+.notify-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.notify-close:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.notify-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  border-radius: 50%;
+}
+
+.notify-icon-success {
+  font-size: 1.75rem;
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.notify-popup h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.notify-popup p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.notify-form input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  transition: border-color var(--transition);
+}
+
+.notify-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.notify-dismiss {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.notify-dismiss:hover {
+  color: var(--color-text);
+}
+
+.notify-success h2 {
+  margin-bottom: 0.5rem;
+}
+
+.notify-success p {
+  margin-bottom: 1.5rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .about-grid,

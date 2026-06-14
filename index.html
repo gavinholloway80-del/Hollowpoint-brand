@@ -444,6 +444,39 @@
     </div>
   </footer>
 
+  <div class="notify-overlay" id="notifyOverlay" hidden aria-hidden="true">
+    <div class="notify-popup" role="dialog" aria-labelledby="notifyTitle" aria-modal="true">
+      <button class="notify-close" id="notifyClose" aria-label="Close">&times;</button>
+
+      <div class="notify-content" id="notifyContent">
+        <span class="notify-icon" aria-hidden="true">✦</span>
+        <h2 id="notifyTitle">Stay in the Glow</h2>
+        <p>Sign up for exclusive offers, beauty tips, and appointment reminders.</p>
+
+        <form class="notify-form" id="notifyForm">
+          <input
+            type="email"
+            id="notifyEmail"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-primary btn-full">Get Notifications</button>
+        </form>
+
+        <button type="button" class="notify-dismiss" id="notifyDismiss">No thanks, maybe later</button>
+      </div>
+
+      <div class="notify-success" id="notifySuccess" hidden>
+        <span class="notify-icon notify-icon-success" aria-hidden="true">✓</span>
+        <h2>You're on the list!</h2>
+        <p>We'll send you beauty updates and special offers soon.</p>
+        <button type="button" class="btn btn-primary" id="notifySuccessClose">Continue Browsing</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
