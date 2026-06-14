@@ -1,6 +1,8 @@
-# Glow & Grace Beauty Studio
+# Hollowpoint Beauty Studio
 
-A modern, responsive cosmetology website showcasing services and products for nails, lashes, hair, and skin care.
+Your cosmetology business website — live and ready to customize.
+
+**Live site:** https://gavinholloway80-del.github.io/Hollowpoint-brand/
 
 ## Features
 
@@ -33,11 +35,11 @@ Then open **http://localhost:8000**
 
 ### Option 3: Live online (GitHub Pages)
 
-After merging to `main`, enable **GitHub Pages** in your repo settings:
+Your site is set up for GitHub Pages. Enable it once:
 
-1. Go to **Settings → Pages**
+1. Go to [repo Settings → Pages](https://github.com/gavinholloway80-del/Hollowpoint-brand/settings/pages)
 2. Under **Build and deployment**, choose **GitHub Actions**
-3. The site will publish at: `https://YOUR-USERNAME.github.io/Hollowpoint-brand/`
+3. Your live URL: **https://gavinholloway80-del.github.io/Hollowpoint-brand/**
 
 ### Troubleshooting
 

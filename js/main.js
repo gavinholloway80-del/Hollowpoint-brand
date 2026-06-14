@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const notifySuccess = document.getElementById('notifySuccess');
   const notifySuccessClose = document.getElementById('notifySuccessClose');
 
-  const NOTIFY_KEY = 'glowGraceNotify';
+  const NOTIFY_KEY = 'hollowpointNotify';
   const DISMISS_DAYS = 7;
   const SHOW_DELAY_MS = 3000;
 
