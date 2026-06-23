@@ -3,256 +3,433 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hollowpoint Beauty Studio — premium nails, lashes, hair, and skin care services and products." />
-  <title>Hollowpoint Beauty Studio | Cosmetology</title>
+  <meta name="description" content="Hollowpoint resells authenticated high-fashion streetwear, designer clothing, sneakers, accessories, and luxury watches." />
+  <title>Hollowpoint | Authenticated Luxury Streetwear & Watches</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="logo">Hollowpoint</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="logo">Hollowpoint</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#products">Products</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#featured-product">Featured</a></li>
+        <li><a href="#sell">Sell With Us</a></li>
+        <li><a href="#authentication">Authentication</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact" class="btn btn-nav">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#checkout" class="btn btn-nav">Cart <span id="cartCount">0</span></a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-bg"></div>
-      <div class="hero-content container">
-        <p class="hero-tag">Luxury Cosmetology Studio</p>
-        <h1>Where Beauty<br /><em>Meets Artistry</em></h1>
-        <p class="hero-desc">Expert nails, lashes, hair, and skin treatments crafted to reveal your most radiant self.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book Appointment</a>
-          <a href="#services" class="btn btn-outline">Explore Services</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Curated resale for culture collectors</p>
+          <h1>Authenticated Luxury Streetwear, Designer Fashion &amp; Watches</h1>
+          <p class="hero-desc">Shop verified grails from the most coveted fashion houses, limited streetwear drops, rare sneakers, and investment-grade timepieces.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-primary">Shop New Arrivals</a>
+            <a href="#sell" class="btn btn-outline">Sell With Us</a>
+          </div>
+          <div class="trust-row" aria-label="Store guarantees">
+            <span>Expert authentication</span>
+            <span>Secure checkout</span>
+            <span>Worldwide shipping</span>
+          </div>
         </div>
-      </div>
-      <div class="hero-scroll">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+        <div class="hero-editorial" aria-label="Luxury streetwear and watch imagery">
+          <div class="editorial-card editorial-card-large">
+            <span>Runway outerwear</span>
+          </div>
+          <div class="editorial-stack">
+            <div class="editorial-card editorial-card-watch">
+              <span>Swiss watches</span>
+            </div>
+            <div class="editorial-card editorial-card-sneaker">
+              <span>Limited sneakers</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="categories" aria-label="Featured categories">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">What We Offer</span>
-          <h2>Our Services</h2>
-          <p>From flawless nails to glowing skin — every treatment is tailored to you.</p>
+        <div class="category-strip">
+          <a href="#shop" class="category-pill" data-filter-link="streetwear">Streetwear</a>
+          <a href="#shop" class="category-pill" data-filter-link="designer">Designer</a>
+          <a href="#shop" class="category-pill" data-filter-link="sneakers">Sneakers</a>
+          <a href="#shop" class="category-pill" data-filter-link="watches">Watches</a>
+          <a href="#shop" class="category-pill" data-filter-link="accessories">Accessories</a>
         </div>
+      </div>
+    </section>
 
-        <div class="services-grid">
-          <article class="service-card" data-service="nails">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M24 4C14 4 8 12 8 22v18c0 2 2 4 4 4h32c2 0 4-2 4-4V22c0-10-6-18-16-18H24z" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 26c4-2 8-2 12 0s8 2 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Nails</h3>
-            <p>Manicures, pedicures, gel extensions, nail art, and restorative treatments for healthy, stunning nails.</p>
-            <ul class="service-list">
-              <li>Classic &amp; Gel Manicure</li>
-              <li>Acrylic &amp; Dip Powder</li>
-              <li>Nail Art &amp; Design</li>
-              <li>Spa Pedicure</li>
-            </ul>
-            <a href="#contact" class="service-link">Book Nails →</a>
+    <section class="drop-section" id="new-arrivals">
+      <div class="container">
+        <div class="section-header section-header-split">
+          <div>
+            <span class="section-label">New arrivals</span>
+            <h2>Freshly authenticated pieces</h2>
+          </div>
+          <p>Every item is inspected, photographed, priced to market, and released in curated drops.</p>
+        </div>
+        <div class="drop-grid">
+          <article class="drop-card">
+            <span class="drop-tag">New</span>
+            <h3>Chrome Hearts Denim Trucker</h3>
+            <p>Size M - Excellent condition</p>
           </article>
-
-          <article class="service-card" data-service="lashes">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <ellipse cx="24" cy="28" rx="18" ry="10" stroke="currentColor" stroke-width="2"/>
-                <path d="M6 28c2-8 8-14 18-14s16 6 18 14" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 20l2 8M18 16l1 10M24 14v12M30 16l-1 10M36 20l-2 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Lashes</h3>
-            <p>Full sets, fills, lifts, and tints to frame your eyes with natural volume or dramatic glamour.</p>
-            <ul class="service-list">
-              <li>Classic Lash Extensions</li>
-              <li>Volume &amp; Hybrid Sets</li>
-              <li>Lash Lift &amp; Tint</li>
-              <li>Lash Fill &amp; Removal</li>
-            </ul>
-            <a href="#contact" class="service-link">Book Lashes →</a>
+          <article class="drop-card drop-card-gold">
+            <span class="drop-tag">Trending</span>
+            <h3>Cartier Santos Medium</h3>
+            <p>Box included - 2021 papers</p>
           </article>
-
-          <article class="service-card" data-service="hair">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M24 6c-8 0-14 6-14 14v4c0 4 2 8 6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M24 6c8 0 14 6 14 14v4c0 4-2 8-6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M10 34c4 6 10 8 14 8s10-2 14-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Hair</h3>
-            <p>Cut, color, styling, and treatments that bring out shine, texture, and confidence in every strand.</p>
-            <ul class="service-list">
-              <li>Cut &amp; Blowout</li>
-              <li>Color &amp; Highlights</li>
-              <li>Balayage &amp; Ombre</li>
-              <li>Deep Conditioning</li>
-            </ul>
-            <a href="#contact" class="service-link">Book Hair →</a>
-          </article>
-
-          <article class="service-card" data-service="skin">
-            <div class="service-icon">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
-                <path d="M24 6v36M6 24h36" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-                <path d="M12 12c6 4 18 4 24 0M12 36c6-4 18-4 24 0" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-              </svg>
-            </div>
-            <h3>Skin</h3>
-            <p>Facials, peels, and customized skin care routines for a clear, luminous, youthful complexion.</p>
-            <ul class="service-list">
-              <li>HydraFacial</li>
-              <li>Chemical Peel</li>
-              <li>Anti-Aging Facial</li>
-              <li>Acne &amp; Brightening</li>
-            </ul>
-            <a href="#contact" class="service-link">Book Skin →</a>
+          <article class="drop-card">
+            <span class="drop-tag">Rare find</span>
+            <h3>Prada Re-Nylon Shoulder Bag</h3>
+            <p>One size - Very good condition</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="products" id="products">
+    <section class="shop" id="shop">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Shop</span>
-          <h2>Our Products</h2>
-          <p>Professional-grade beauty products to maintain your glow between visits.</p>
+          <h2>Luxury resale marketplace</h2>
+          <p>Filter authenticated pieces by brand, size, condition, category, price, and availability.</p>
         </div>
 
-        <div class="product-filters" id="productFilters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="nails">Nails</button>
-          <button class="filter-btn" data-filter="lashes">Lashes</button>
-          <button class="filter-btn" data-filter="hair">Hair</button>
-          <button class="filter-btn" data-filter="skin">Skin</button>
+        <div class="shop-toolbar" aria-label="Shop controls">
+          <label class="search-box" for="productSearch">
+            <span>Search</span>
+            <input type="search" id="productSearch" placeholder="Search brands, watches, sneakers..." autocomplete="off" />
+          </label>
+          <div class="toolbar-actions">
+            <button type="button" class="icon-action" id="wishlistButton" aria-label="Wishlist">Wishlist <span id="wishlistCount">0</span></button>
+            <a href="#checkout" class="icon-action">Cart <span id="toolbarCartCount">0</span></a>
+          </div>
         </div>
 
-        <div class="products-grid" id="productsGrid">
-          <article class="product-card" data-category="nails">
-            <div class="product-image product-nails-1"></div>
-            <div class="product-info">
-              <span class="product-category">Nails</span>
-              <h3>Cuticle Oil Elixir</h3>
-              <p>Nourishing blend of jojoba and vitamin E for healthy nail beds.</p>
-              <div class="product-footer">
-                <span class="product-price">$18</span>
-                <button class="btn btn-small">Add to Cart</button>
-              </div>
+        <div class="shop-layout">
+          <aside class="filters" aria-label="Product filters">
+            <div class="filter-group">
+              <label for="brandFilter">Brand</label>
+              <select id="brandFilter" data-filter="brand">
+                <option value="all">All brands</option>
+                <option value="balenciaga">Balenciaga</option>
+                <option value="chrome-hearts">Chrome Hearts</option>
+                <option value="cartier">Cartier</option>
+                <option value="dior">Dior</option>
+                <option value="prada">Prada</option>
+                <option value="rolex">Rolex</option>
+              </select>
             </div>
-          </article>
+            <div class="filter-group">
+              <label for="sizeFilter">Size</label>
+              <select id="sizeFilter" data-filter="size">
+                <option value="all">All sizes</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="10">10</option>
+                <option value="one-size">One size</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="conditionFilter">Condition</label>
+              <select id="conditionFilter" data-filter="condition">
+                <option value="all">All conditions</option>
+                <option value="new">New</option>
+                <option value="excellent">Excellent</option>
+                <option value="very-good">Very good</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="categoryFilter">Category</label>
+              <select id="categoryFilter" data-filter="category">
+                <option value="all">All categories</option>
+                <option value="streetwear">Streetwear</option>
+                <option value="designer">Designer</option>
+                <option value="sneakers">Sneakers</option>
+                <option value="watches">Watches</option>
+                <option value="accessories">Accessories</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="priceFilter">Price</label>
+              <select id="priceFilter" data-filter="price">
+                <option value="all">All prices</option>
+                <option value="under-500">Under $500</option>
+                <option value="500-1500">$500 - $1,500</option>
+                <option value="1500-5000">$1,500 - $5,000</option>
+                <option value="5000-plus">$5,000+</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="availabilityFilter">Availability</label>
+              <select id="availabilityFilter" data-filter="availability">
+                <option value="all">All availability</option>
+                <option value="in-stock">In stock</option>
+                <option value="reserved">Reserved</option>
+              </select>
+            </div>
+            <button type="button" class="filter-reset" id="resetFilters">Reset filters</button>
+          </aside>
 
-          <article class="product-card" data-category="nails">
-            <div class="product-image product-nails-2"></div>
-            <div class="product-info">
-              <span class="product-category">Nails</span>
-              <h3>Gel Polish Collection</h3>
-              <p>Long-lasting, chip-free colors in 24 salon-favorite shades.</p>
-              <div class="product-footer">
-                <span class="product-price">$14</span>
-                <button class="btn btn-small">Add to Cart</button>
+          <div class="products-grid" id="productsGrid">
+            <article class="product-card" data-brand="chrome-hearts" data-size="m" data-condition="excellent" data-category="streetwear" data-price="1500-5000" data-availability="in-stock" data-search="chrome hearts denim trucker streetwear jacket">
+              <div class="product-image image-denim">
+                <button type="button" class="wishlist-toggle" aria-label="Add Chrome Hearts Denim Trucker to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Chrome Hearts</span>
+                <h3>Denim Trucker Jacket</h3>
+                <p>Condition: Excellent - Size M</p>
+                <div class="product-footer">
+                  <span class="product-price">$2,850</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
 
-          <article class="product-card" data-category="lashes">
-            <div class="product-image product-lashes-1"></div>
-            <div class="product-info">
-              <span class="product-category">Lashes</span>
-              <h3>Lash Growth Serum</h3>
-              <p>Peptide-rich formula for longer, fuller natural lashes.</p>
-              <div class="product-footer">
-                <span class="product-price">$42</span>
-                <button class="btn btn-small">Add to Cart</button>
+            <article class="product-card" data-brand="cartier" data-size="one-size" data-condition="excellent" data-category="watches" data-price="5000-plus" data-availability="in-stock" data-search="cartier santos medium luxury watch">
+              <div class="product-image image-watch">
+                <button type="button" class="wishlist-toggle" aria-label="Add Cartier Santos Medium to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Cartier</span>
+                <h3>Santos Medium Watch</h3>
+                <p>Condition: Excellent - Box included</p>
+                <div class="product-footer">
+                  <span class="product-price">$7,400</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
 
-          <article class="product-card" data-category="lashes">
-            <div class="product-image product-lashes-2"></div>
-            <div class="product-info">
-              <span class="product-category">Lashes</span>
-              <h3>Lash Cleanser Foam</h3>
-              <p>Gentle daily cleanser to extend the life of extensions.</p>
-              <div class="product-footer">
-                <span class="product-price">$24</span>
-                <button class="btn btn-small">Add to Cart</button>
+            <article class="product-card" data-brand="balenciaga" data-size="10" data-condition="very-good" data-category="sneakers" data-price="500-1500" data-availability="in-stock" data-search="balenciaga track sneaker black size 10">
+              <div class="product-image image-sneaker">
+                <button type="button" class="wishlist-toggle" aria-label="Add Balenciaga Track Sneaker to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Balenciaga</span>
+                <h3>Track Sneaker Black</h3>
+                <p>Condition: Very good - Size 10</p>
+                <div class="product-footer">
+                  <span class="product-price">$620</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
 
-          <article class="product-card" data-category="hair">
-            <div class="product-image product-hair-1"></div>
-            <div class="product-info">
-              <span class="product-category">Hair</span>
-              <h3>Silk Repair Mask</h3>
-              <p>Deep conditioning treatment for damaged, color-treated hair.</p>
-              <div class="product-footer">
-                <span class="product-price">$36</span>
-                <button class="btn btn-small">Add to Cart</button>
+            <article class="product-card" data-brand="dior" data-size="l" data-condition="new" data-category="designer" data-price="1500-5000" data-availability="reserved" data-search="dior oblique bomber designer jacket">
+              <div class="product-image image-bomber">
+                <button type="button" class="wishlist-toggle" aria-label="Add Dior Oblique Bomber to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Dior</span>
+                <h3>Oblique Bomber Jacket</h3>
+                <p>Condition: New - Size L</p>
+                <div class="product-footer">
+                  <span class="product-price">$3,950</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
 
-          <article class="product-card" data-category="hair">
-            <div class="product-image product-hair-2"></div>
-            <div class="product-info">
-              <span class="product-category">Hair</span>
-              <h3>Heat Protectant Spray</h3>
-              <p>Lightweight shield against heat styling up to 450°F.</p>
-              <div class="product-footer">
-                <span class="product-price">$28</span>
-                <button class="btn btn-small">Add to Cart</button>
+            <article class="product-card" data-brand="prada" data-size="one-size" data-condition="very-good" data-category="accessories" data-price="500-1500" data-availability="in-stock" data-search="prada re nylon shoulder bag accessory">
+              <div class="product-image image-bag">
+                <button type="button" class="wishlist-toggle" aria-label="Add Prada Re-Nylon Shoulder Bag to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Prada</span>
+                <h3>Re-Nylon Shoulder Bag</h3>
+                <p>Condition: Very good - One size</p>
+                <div class="product-footer">
+                  <span class="product-price">$980</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
 
-          <article class="product-card" data-category="skin">
-            <div class="product-image product-skin-1"></div>
-            <div class="product-info">
-              <span class="product-category">Skin</span>
-              <h3>Vitamin C Brightening Serum</h3>
-              <p>20% vitamin C for radiant, even-toned skin.</p>
-              <div class="product-footer">
-                <span class="product-price">$52</span>
-                <button class="btn btn-small">Add to Cart</button>
+            <article class="product-card" data-brand="rolex" data-size="one-size" data-condition="excellent" data-category="watches" data-price="5000-plus" data-availability="reserved" data-search="rolex datejust 36 silver dial luxury watch">
+              <div class="product-image image-rolex">
+                <button type="button" class="wishlist-toggle" aria-label="Add Rolex Datejust 36 to wishlist">+</button>
               </div>
-            </div>
-          </article>
+              <div class="product-info">
+                <span class="product-category">Rolex</span>
+                <h3>Datejust 36 Silver Dial</h3>
+                <p>Condition: Excellent - 2020 card</p>
+                <div class="product-footer">
+                  <span class="product-price">$9,850</span>
+                  <button type="button" class="btn btn-small add-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="no-results" id="noResults" hidden>No pieces match those filters. Reset filters or search another brand.</p>
+      </div>
+    </section>
 
-          <article class="product-card" data-category="skin">
-            <div class="product-image product-skin-2"></div>
-            <div class="product-info">
-              <span class="product-category">Skin</span>
-              <h3>Hydrating Night Cream</h3>
-              <p>Rich ceramide formula for overnight skin renewal.</p>
-              <div class="product-footer">
-                <span class="product-price">$48</span>
-                <button class="btn btn-small">Add to Cart</button>
-              </div>
+    <section class="product-detail" id="featured-product">
+      <div class="container product-detail-grid">
+        <div class="product-gallery" aria-label="Featured product gallery">
+          <div class="gallery-main image-watch"></div>
+          <div class="gallery-thumbs">
+            <div class="thumb thumb-watch-1"></div>
+            <div class="thumb thumb-watch-2"></div>
+            <div class="thumb thumb-watch-3"></div>
+          </div>
+        </div>
+        <div class="product-detail-content">
+          <span class="section-label">Featured product page</span>
+          <p class="product-brand">Cartier</p>
+          <h2>Santos de Cartier Medium</h2>
+          <p class="detail-price">$7,400</p>
+          <div class="detail-meta">
+            <span>Size: Medium</span>
+            <span>Condition: Excellent</span>
+            <span>Availability: In stock</span>
+          </div>
+          <p>Polished steel case, automatic movement, silvered opaline dial, and original box. A refined daily watch with unmistakable design language and strong resale demand.</p>
+          <div class="guarantee-card">
+            <strong>Authentication guarantee</strong>
+            <p>Every watch is inspected for serial alignment, movement integrity, case finishing, bracelet condition, and paperwork consistency before release.</p>
+          </div>
+          <details open>
+            <summary>Shipping and returns</summary>
+            <p>Insured express shipping is available worldwide. Returns are accepted within 7 days on eligible items that remain tagged and unworn.</p>
+          </details>
+          <div class="detail-actions">
+            <button type="button" class="btn btn-primary add-cart">Add to Cart</button>
+            <a href="#checkout" class="btn btn-outline">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sell" id="sell">
+      <div class="container sell-grid">
+        <div class="sell-content">
+          <span class="section-label">Sell With Us</span>
+          <h2>Convert grails into capital with a secure resale process</h2>
+          <p>Submit designer clothing, limited sneakers, accessories, or watches for a fast quote. Our specialists authenticate, price, photograph, and place your item in front of serious buyers.</p>
+          <div class="process-list">
+            <div>
+              <span>01</span>
+              <strong>Submit your item</strong>
+              <p>Send brand, condition, photos, and purchase details.</p>
             </div>
+            <div>
+              <span>02</span>
+              <strong>Receive a fast quote</strong>
+              <p>Get a cash offer or consignment estimate based on current market demand.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Ship securely</strong>
+              <p>Use our insured intake process and expert authentication review.</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form sell-form" id="sellForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sellerName">Name</label>
+              <input type="text" id="sellerName" name="sellerName" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="sellerEmail">Email</label>
+              <input type="email" id="sellerEmail" name="sellerEmail" required placeholder="you@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="itemBrand">Item brand</label>
+              <input type="text" id="itemBrand" name="itemBrand" required placeholder="Rolex, Dior, Chrome Hearts..." />
+            </div>
+            <div class="form-group">
+              <label for="itemType">Item type</label>
+              <select id="itemType" name="itemType" required>
+                <option value="">Select item type</option>
+                <option value="clothing">Designer clothing</option>
+                <option value="streetwear">Streetwear</option>
+                <option value="sneakers">Sneakers</option>
+                <option value="accessories">Accessories</option>
+                <option value="watch">Luxury watch</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="itemCondition">Condition</label>
+              <select id="itemCondition" name="itemCondition" required>
+                <option value="">Select condition</option>
+                <option value="new">New with tags</option>
+                <option value="excellent">Excellent</option>
+                <option value="very-good">Very good</option>
+                <option value="worn">Worn</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="itemPhotos">Photos</label>
+              <input type="file" id="itemPhotos" name="itemPhotos" accept="image/*" multiple />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="itemNotes">Notes</label>
+            <textarea id="itemNotes" name="itemNotes" rows="4" placeholder="Tell us about boxes, receipts, flaws, or paperwork."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Request a Quote</button>
+          <p class="form-success" id="sellSuccess" hidden>Your submission is ready. Our buying team will follow up shortly.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="authentication" id="authentication">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Authentication</span>
+          <h2>Verified before it reaches the floor</h2>
+          <p>Trust is the product. Every item is inspected through category-specific checks before it is listed.</p>
+        </div>
+        <div class="auth-grid">
+          <article class="auth-card">
+            <span>Designer clothing</span>
+            <h3>Construction, labels, and materials</h3>
+            <p>We review fabric quality, care tags, hardware, stitching, pattern placement, and seasonal references.</p>
+          </article>
+          <article class="auth-card">
+            <span>Sneakers</span>
+            <h3>Shape, codes, and production details</h3>
+            <p>Pairs are checked for box labels, SKU alignment, sole molds, material finish, and factory details.</p>
+          </article>
+          <article class="auth-card">
+            <span>Accessories</span>
+            <h3>Hardware, embossing, and finish</h3>
+            <p>Bags, belts, and jewelry are evaluated for engraving, leather grain, serial markings, and packaging.</p>
+          </article>
+          <article class="auth-card">
+            <span>Watches</span>
+            <h3>Serials, movement, and paperwork</h3>
+            <p>Luxury watches receive serial review, case and bracelet inspection, timing checks, and provenance review.</p>
           </article>
         </div>
       </div>
@@ -263,84 +440,67 @@
         <div class="about-visual">
           <div class="about-image"></div>
           <div class="about-badge">
-            <span class="badge-number">10+</span>
-            <span class="badge-text">Years of Excellence</span>
+            <span class="badge-number">100%</span>
+            <span class="badge-text">Authenticated inventory</span>
           </div>
         </div>
         <div class="about-content">
-          <span class="section-label">About Us</span>
-          <h2>Your Beauty, Our Passion</h2>
-          <p>At Hollowpoint Beauty, we believe beauty is personal. Our licensed cosmetologists bring years of expertise in nails, lashes, hair, and skin care — using only premium products and the latest techniques.</p>
-          <p>Whether you're preparing for a special occasion or treating yourself to self-care, we create a relaxing, luxurious experience tailored to your unique style and goals.</p>
+          <span class="section-label">About Hollowpoint</span>
+          <h2>Built for rare-piece collectors and luxury buyers</h2>
+          <p>Hollowpoint is a curated resale platform for the pieces that define culture: runway designer, high-fashion streetwear, scarce sneakers, premium accessories, and watches with lasting value.</p>
+          <p>Our edit is intentionally selective. We source items with strong provenance, inspect every detail, and present each piece with transparent condition notes so collectors can buy with confidence.</p>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-value">2,500+</span>
-              <span class="stat-label">Happy Clients</span>
+              <span class="stat-value">24h</span>
+              <span class="stat-label">Quote review</span>
             </div>
             <div class="stat">
               <span class="stat-value">4</span>
-              <span class="stat-label">Specialty Areas</span>
+              <span class="stat-label">Authentication desks</span>
             </div>
             <div class="stat">
-              <span class="stat-value">100%</span>
-              <span class="stat-label">Satisfaction Focus</span>
+              <span class="stat-value">Global</span>
+              <span class="stat-label">Buyer network</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="gallery" id="gallery">
+    <section class="social-proof" aria-label="Instagram and trust badges">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Portfolio</span>
-          <h2>Our Work</h2>
-          <p>A glimpse of the transformations we create every day.</p>
+        <div class="section-header section-header-split">
+          <div>
+            <span class="section-label">Culture feed</span>
+            <h2>Follow the archive</h2>
+          </div>
+          <p>Drop previews, authentication notes, styling edits, and incoming watch inventory.</p>
         </div>
-        <div class="gallery-grid">
-          <div class="gallery-item gallery-nails"></div>
-          <div class="gallery-item gallery-lashes"></div>
-          <div class="gallery-item gallery-hair"></div>
-          <div class="gallery-item gallery-skin"></div>
-          <div class="gallery-item gallery-nails-2"></div>
-          <div class="gallery-item gallery-hair-2"></div>
+        <div class="instagram-grid">
+          <div class="insta-tile image-denim"><span>@hollowpoint</span></div>
+          <div class="insta-tile image-sneaker"><span>New drop</span></div>
+          <div class="insta-tile image-watch"><span>Watch desk</span></div>
+          <div class="insta-tile image-bag"><span>Rare bags</span></div>
+        </div>
+        <div class="trust-badges">
+          <span>Authenticated inventory</span>
+          <span>Encrypted payment</span>
+          <span>Insured global delivery</span>
         </div>
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Reviews</span>
-          <h2>What Clients Say</h2>
+    <section class="checkout" id="checkout">
+      <div class="container checkout-card">
+        <div>
+          <span class="section-label">Secure checkout</span>
+          <h2>Reserve your next piece</h2>
+          <p>Cart, wishlist, and checkout actions are mocked for this static storefront. Connect a commerce backend to process payments, inventory, and order fulfillment.</p>
         </div>
-        <div class="testimonials-slider" id="testimonialsSlider">
-          <blockquote class="testimonial active">
-            <p>"The best lash extensions I've ever had. Natural, full, and they lasted weeks. I'll never go anywhere else!"</p>
-            <footer>
-              <strong>Sarah M.</strong>
-              <span>Lash Extensions</span>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>"My balayage turned out absolutely stunning. The colorist really listened to what I wanted. Highly recommend!"</p>
-            <footer>
-              <strong>Jessica L.</strong>
-              <span>Hair Color</span>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>"The HydraFacial left my skin glowing for days. Such a relaxing atmosphere and incredibly skilled estheticians."</p>
-            <footer>
-              <strong>Amanda R.</strong>
-              <span>Skin Care</span>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="testimonial-dots" id="testimonialDots">
-          <button class="dot active" aria-label="Testimonial 1"></button>
-          <button class="dot" aria-label="Testimonial 2"></button>
-          <button class="dot" aria-label="Testimonial 3"></button>
+        <div class="checkout-summary">
+          <p><strong id="checkoutCartCount">0</strong> item(s) in cart</p>
+          <button type="button" class="btn btn-primary" id="checkoutButton">Proceed to Secure Checkout</button>
+          <p class="form-success" id="checkoutSuccess" hidden>Checkout request received. Secure payment integration is ready to connect.</p>
         </div>
       </div>
     </section>
@@ -348,22 +508,21 @@
     <section class="contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-info">
-          <span class="section-label">Get in Touch</span>
-          <h2>Book Your Appointment</h2>
-          <p>Ready to treat yourself? Fill out the form and we'll get back to you within 24 hours.</p>
-
+          <span class="section-label">Contact</span>
+          <h2>Speak with the archive team</h2>
+          <p>Ask about a piece, schedule a private sourcing request, or book an authentication appointment.</p>
           <div class="contact-details">
             <div class="contact-item">
-              <strong>Location</strong>
-              <p>123 Beauty Lane, Suite 200<br />Your City, ST 12345</p>
+              <strong>Email</strong>
+              <p>concierge@hollowpoint.com</p>
             </div>
             <div class="contact-item">
-              <strong>Hours</strong>
-              <p>Mon – Fri: 9am – 7pm<br />Sat: 10am – 5pm · Sun: Closed</p>
+              <strong>Instagram</strong>
+              <p>@hollowpoint</p>
             </div>
             <div class="contact-item">
-              <strong>Contact</strong>
-              <p>(555) 123-4567<br />hello@hollowpointbeauty.com</p>
+              <strong>Store location</strong>
+              <p>Luxury District Showroom<br />123 Market Street, Suite 500<br />Your City, ST 12345</p>
             </div>
           </div>
         </div>
@@ -371,12 +530,12 @@
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="jane@email.com" />
+              <input type="email" id="email" name="email" required placeholder="you@email.com" />
             </div>
           </div>
           <div class="form-row">
@@ -385,22 +544,22 @@
               <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
             </div>
             <div class="form-group">
-              <label for="service">Service</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="nails">Nails</option>
-                <option value="lashes">Lashes</option>
-                <option value="hair">Hair</option>
-                <option value="skin">Skin</option>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Select a topic</option>
+                <option value="purchase">Purchase question</option>
+                <option value="sell">Selling or consignment</option>
+                <option value="authentication">Authentication</option>
+                <option value="sourcing">Private sourcing</option>
               </select>
             </div>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your desired treatment or any questions..."></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you are looking for."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Booking Request</button>
-          <p class="form-success" id="formSuccess" hidden>Thank you! We'll be in touch soon.</p>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <p class="form-success" id="formSuccess" hidden>Thank you. The concierge team will be in touch soon.</p>
         </form>
       </div>
     </section>
@@ -409,38 +568,38 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo">Hollowpoint</a>
-        <p>Luxury cosmetology for nails, lashes, hair, and skin.</p>
+        <a href="#home" class="logo">Hollowpoint</a>
+        <p>Authenticated luxury streetwear, designer fashion, rare sneakers, accessories, and watches.</p>
       </div>
       <div class="footer-links">
-        <h4>Services</h4>
+        <h4>Shop</h4>
         <ul>
-          <li><a href="#services">Nails</a></li>
-          <li><a href="#services">Lashes</a></li>
-          <li><a href="#services">Hair</a></li>
-          <li><a href="#services">Skin</a></li>
+          <li><a href="#shop">New arrivals</a></li>
+          <li><a href="#shop">Designer</a></li>
+          <li><a href="#shop">Watches</a></li>
+          <li><a href="#shop">Sneakers</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4>Company</h4>
         <ul>
-          <li><a href="#products">Products</a></li>
+          <li><a href="#sell">Sell With Us</a></li>
+          <li><a href="#authentication">Authentication</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-social">
-        <h4>Follow Us</h4>
+        <h4>Follow</h4>
         <div class="social-links">
           <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Facebook">FB</a>
           <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="YouTube">YT</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>&copy; 2026 Hollowpoint Beauty Studio. All rights reserved.</p>
+      <p>&copy; 2026 Hollowpoint. All rights reserved.</p>
     </div>
   </footer>
 
@@ -449,9 +608,9 @@
       <button class="notify-close" id="notifyClose" aria-label="Close">&times;</button>
 
       <div class="notify-content" id="notifyContent">
-        <span class="notify-icon" aria-hidden="true">✦</span>
-        <h2 id="notifyTitle">Stay Beautiful with Us</h2>
-        <p>Sign up for exclusive offers, beauty tips, and appointment reminders.</p>
+        <span class="notify-icon" aria-hidden="true">A</span>
+        <h2 id="notifyTitle">Join the private drop list</h2>
+        <p>Get first access to authenticated grails, watch arrivals, and seller payout opportunities.</p>
 
         <form class="notify-form" id="notifyForm">
           <input
@@ -462,16 +621,16 @@
             required
             autocomplete="email"
           />
-          <button type="submit" class="btn btn-primary btn-full">Get Notifications</button>
+          <button type="submit" class="btn btn-primary btn-full">Get Drop Alerts</button>
         </form>
 
-        <button type="button" class="notify-dismiss" id="notifyDismiss">No thanks, maybe later</button>
+        <button type="button" class="notify-dismiss" id="notifyDismiss">Continue browsing</button>
       </div>
 
       <div class="notify-success" id="notifySuccess" hidden>
-        <span class="notify-icon notify-icon-success" aria-hidden="true">✓</span>
-        <h2>You're on the list!</h2>
-        <p>We'll send you beauty updates and special offers soon.</p>
+        <span class="notify-icon notify-icon-success" aria-hidden="true">OK</span>
+        <h2>You are on the list</h2>
+        <p>Expect curated luxury resale alerts from the archive.</p>
         <button type="button" class="btn btn-primary" id="notifySuccessClose">Continue Browsing</button>
       </div>
     </div>

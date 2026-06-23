@@ -4,7 +4,7 @@ set -euo pipefail
 PORT="${1:-8000}"
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-echo "Starting Hollowpoint Beauty website..."
+echo "Starting Hollowpoint website..."
 echo "Open: http://localhost:${PORT}"
 echo "Press Ctrl+C to stop."
 
