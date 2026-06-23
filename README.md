@@ -49,7 +49,7 @@ The site is structured for GitHub Pages. Enable Pages in repository settings and
 ## Structure
 
 ```text
-├── index.html      # Main static storefront
-├── css/styles.css  # Luxury storefront styling
-└── js/main.js      # Navigation, filters, forms, cart, wishlist, and popup behavior
+|-- index.html      # Main static storefront
+|-- css/styles.css  # Luxury storefront styling
+`-- js/main.js      # Navigation, filters, forms, cart, wishlist, and popup behavior
 ```
