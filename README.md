@@ -1,22 +1,25 @@
-# Hollowpoint Beauty Studio
+# Apex Archive
 
-Your cosmetology business website — live and ready to customize.
+A modern luxury e-commerce storefront for authenticated high-fashion streetwear, designer clothing, sneakers, accessories, and watches.
 
 **Live site:** https://gavinholloway80-del.github.io/Hollowpoint-brand/
 
 ## Features
 
-- **Services** — Dedicated sections for Nails, Lashes, Hair, and Skin with treatment listings
-- **Products** — Filterable product catalog by category
-- **Gallery** — Portfolio showcase of work
-- **Booking** — Contact form for appointment requests
-- **Responsive** — Mobile-friendly design with smooth animations
+- **Luxury homepage** with editorial hero visuals, trust badges, featured categories, new arrivals, trending pieces, and rare finds
+- **Shop section** with search and filters for brand, size, condition, category, price, and availability
+- **Product cards** showing brand, item name, condition, size, and price with cart and wishlist interactions
+- **Featured product page** with gallery, metadata, authentication guarantee, shipping details, and buy actions
+- **Sell With Us form** for customer resale and consignment submissions with photo uploads
+- **Authentication section** covering designer clothing, sneakers, accessories, and watches
+- **About and Contact sections** with luxury resale copywriting, showroom placeholders, and concierge messaging
+- **Static commerce interactions** for cart count, wishlist count, secure checkout prompt, newsletter signup, and responsive navigation
 
 ## Getting Started
 
 **Do not double-click `index.html`.** Browsers often block styles and scripts when opening files directly. Use a local server instead.
 
-### Option 1: Quick start (recommended)
+### Option 1: Quick start
 
 ```bash
 ./start.sh
@@ -31,38 +34,22 @@ cd /path/to/this/folder
 python3 -m http.server 8000
 ```
 
-Then open **http://localhost:8000**
+Then open **http://localhost:8000**.
 
-### Option 3: Live online (GitHub Pages)
+### Option 3: GitHub Pages
 
-Your site is set up for GitHub Pages. Enable it once:
-
-1. Go to [repo Settings → Pages](https://github.com/gavinholloway80-del/Hollowpoint-brand/settings/pages)
-2. Under **Build and deployment**, choose **GitHub Actions**
-3. Your live URL: **https://gavinholloway80-del.github.io/Hollowpoint-brand/**
-
-### Troubleshooting
-
-- **Blank page or no styling?** You opened the file directly. Use `http://localhost:8000` instead.
-- **Port already in use?** Run `./start.sh 8080` and open `http://localhost:8080`
-- **Don't have the files yet?** Clone the repo first:
-
-```bash
-git clone https://github.com/gavinholloway80-del/Hollowpoint-brand.git
-cd Hollowpoint-brand
-./start.sh
-```
+The site is structured for GitHub Pages. Enable Pages in repository settings and serve from the branch or workflow configured for this repo.
 
 ## Customize
 
-- Update business name, contact info, and hours in `index.html`
-- Adjust colors in `css/styles.css` (`:root` variables)
-- Add real product images by replacing gradient placeholders in CSS
+- Update the brand name, showroom details, contact email, and Instagram handle in `index.html`
+- Replace CSS gradient placeholders in `css/styles.css` with real product photography when available
+- Connect a commerce backend for payment processing, inventory, checkout, order fulfillment, and seller submissions
 
 ## Structure
 
-```
-├── index.html      # Main page
-├── css/styles.css  # Styles
-└── js/main.js      # Interactivity
+```text
+├── index.html      # Main static storefront
+├── css/styles.css  # Luxury storefront styling
+└── js/main.js      # Navigation, filters, forms, cart, wishlist, and popup behavior
 ```
